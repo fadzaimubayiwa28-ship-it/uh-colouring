@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chacoe's To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <section class="intro" id="intro">
+        <h1>hey, Chacoe</h1>
+      </section>
+
+      <section class="book-view" id="bookView" aria-hidden="true">
+        <div class="paper-frame">
+          <header>
+            <h2>Today's To-Do List</h2>
+            <p>Create your plan for the day.</p>
+          </header>
+
+          <ul id="todoList" class="todo-list"></ul>
+
+          <button id="openComposer" class="plus-btn" aria-label="Create a to-do item">+</button>
+        </div>
+      </section>
+    </main>
+
+    <section class="composer hidden" id="composer" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="composer-sheet">
+        <h3>New To-Do</h3>
+        <p>A blank page to write your task.</p>
+        <textarea id="todoInput" placeholder="Write your to-do item here..."></textarea>
+        <div class="composer-actions">
+          <button id="cancelCompose" class="ghost">Cancel</button>
+          <button id="addTodo" class="solid">Add to list</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
